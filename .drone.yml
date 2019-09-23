@@ -1,0 +1,11 @@
+kind: pipeline
+name: default
+
+steps:
+- name: line-notify
+  image: wei840222/drone-line-notify-plugin
+  settings:
+    access_token: YZWo8Na989UnvtJxaTHdb9IAXtlGcdLAaZLv8xx2z2E
+  when:
+    status: [success, failure]
+    branch: [beta, master]
